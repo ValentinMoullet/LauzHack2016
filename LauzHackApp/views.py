@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-	return render(request, 'LauzHackApp/seeThroughMe.html', {})
+	return render(request, 'LauzHackApp/chooseYourType.html', {})
 '''
 if request.method == 'POST':
         if 'url' in request.POST:
@@ -18,6 +18,13 @@ if request.method == 'POST':
 
             return render(request, 'video.html')
             '''
+def pickVideo(request):
+    return render(request, 'LauzHackApp/pickVideo', {})    
+
+def pickChannel(request):
+    return render(request, 'LauzHackApp/pickChannel',{})
+
+
 def youWatch(request):
 	context = {}
 
@@ -26,3 +33,9 @@ def youWatch(request):
 	context["video_link"] = ("https://www.youtube.com/embed/" + v.split("=")[1] + "?rel=0")
 
 	return render(request, 'LauzHackApp/youWatch.html', context)
+
+def youAre(request):
+
+
+
+    return render(request, 'LauzHackApp/youAre.html', {})

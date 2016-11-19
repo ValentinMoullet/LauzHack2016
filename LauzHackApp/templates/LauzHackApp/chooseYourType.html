@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	{% load staticfiles %}
+
+        <title>See through me</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Language" content="en-us">
+        <link rel="stylesheet" type="text/css" href="{% static 'Style.css' %}">
+        
+    </head>
+
+    <body>
+
+    	<a href="{% url 'pickVideo' %}">I'm a viewer</a>
+
+    	<a href="{% url 'pickChannel' %}">I'm a youtuber</a>
+
+    </body>
+	<script src="{% static 'jquery-3.1.1.js' %}"></script>
+</html>
