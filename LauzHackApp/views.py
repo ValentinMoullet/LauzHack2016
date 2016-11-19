@@ -1,7 +1,8 @@
 from django.shortcuts import render
 
+
 def index(request):
-	return render(request, 'LauzHackApp/seeThroughMe.html')
+	return render(request, 'LauzHackApp/seeThroughMe.html', {})
 '''
 if request.method == 'POST':
         if 'url' in request.POST:
@@ -18,4 +19,10 @@ if request.method == 'POST':
             return render(request, 'video.html')
             '''
 def youWatch(request):
-	return render(request, 'LauzHackApp/youWatch.html')
+	context = {}
+
+	v = request.POST["videoLink"]
+	
+	context["video_link"] = ("https://www.youtube.com/embed/" + v.split("=")[1] + "?rel=0")
+
+	return render(request, 'LauzHackApp/youWatch.html', context)
