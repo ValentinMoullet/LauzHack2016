@@ -1,0 +1,25 @@
+root { 
+    display: block;
+}
+h1{
+    font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #c81010;
+}
+img{
+    width: 300px;
+    height: 175px;
+}
+td{
+    border: solid transparent;
+    border-width: 40px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+body{
+background-image: url("Background.jpg");
+}
